@@ -1,3 +1,5 @@
+package domain;
+
 public class MembruPremium extends Cititor {
     private int puncteBonus;
 
@@ -6,8 +8,16 @@ public class MembruPremium extends Cititor {
         this.puncteBonus = puncteBonus;
     }
 
-    public int getPuncteBonus() { return puncteBonus; }
+    public int getPuncteBonus() {
+        return puncteBonus;
+    }
+
     public void adaugaPuncte(int puncte) {
         this.puncteBonus += puncte;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", puncteBonus=" + puncteBonus;
     }
 }

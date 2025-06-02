@@ -1,3 +1,5 @@
+package domain;
+
 public class Recenzie {
     private Carte carte;
     private String continut;

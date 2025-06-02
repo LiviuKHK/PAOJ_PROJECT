@@ -1,3 +1,8 @@
+package service;
+
+import java.time.LocalDate;
+
+import domain.*;
 import java.util.*;
 
 public class BibliotecaService {
@@ -26,11 +31,14 @@ public class BibliotecaService {
         }
     }
 
-
     public void imprumutaCarte(Carte carte, Cititor cititor) {
         if (carte.isDisponibila()) {
             carte.setDisponibila(false);
-            imprumuturi.add(new Imprumut(carte, cititor));
+            imprumuturi.add(new Imprumut(
+                    carte.getId(),
+                    cititor.getId(),
+                    LocalDate.now()
+            ));
         }
     }
 
